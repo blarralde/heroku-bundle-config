@@ -33,11 +33,16 @@ echo "Renaming heroku-bundle"
 mv "$build_dir/.heroku-bundle" "$build_dir/.bundle"
 echo "Done."
 
+
+echo 'ls -all "$build_dir/.apt/usr/include"'
+ls -all "$build_dir/.apt/usr/include"
+echo 'ls -all "$build_dir/.apt/usr/lib"'
+ls -all "$build_dir/.apt/usr/lib"
+echo 'ls -all "$build_dir/.apt/usr/share"'
+ls -all "$build_dir/.apt/usr/share"
+
 echo 'ls -all "$build_dir"'
 ls -all "$build_dir"
-echo 'ls -all "$build_dir/.apt/usr"'
-ls -all "$build_dir/.apt/usr"
-
 echo 'ls "$build_dir/.heroku-bundle"'
 ls "$build_dir/.heroku-bundle"
 echo 'ls "$build_dir/.bundle"'
