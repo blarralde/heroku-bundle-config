@@ -35,17 +35,19 @@ echo "Done."
 
 echo 'ls -all "$build_dir"'
 ls -all "$build_dir"
+echo 'ls -all "$build_dir/.apt"'
+ls -all "$build_dir/.apt"
 echo 'ls "$build_dir/.heroku-bundle"'
 ls "$build_dir/.heroku-bundle"
 echo 'ls "$build_dir/.bundle"'
 ls "$build_dir/.bundle"
-echo "Convert all aboslute path references in the bundle to refer the temporary build location instead."
+echo "Convert all absolute path references in the bundle to refer to the temporary build location instead."
 find "$build_dir/.bundle/" -type f -exec sed -i "s /app/ $build_dir/ g" {} \;
 #sed "s /app/ /$build_dir/ g" "$build_dir/.bundle/*"
 
 echo "Purging .bundle folder if present from cache as well"
 [ -d "$cache_dir/.bundle" ] && rm -rf "$cache_dir/.bundle"
-echo "Caching the changes.."
+echo "Caching the changes..."
 mkdir -p "$cache_dir"
 cp -r "$build_dir/.bundle" "$cache_dir/.bundle"
 
