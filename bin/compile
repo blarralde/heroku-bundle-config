@@ -35,8 +35,9 @@ echo "Done."
 
 echo 'ls -all "$build_dir"'
 ls -all "$build_dir"
-echo 'ls -all "$build_dir/.apt"'
-ls -all "$build_dir/.apt"
+echo 'ls -all "$build_dir/.apt/usr"'
+ls -all "$build_dir/.apt/usr"
+
 echo 'ls "$build_dir/.heroku-bundle"'
 ls "$build_dir/.heroku-bundle"
 echo 'ls "$build_dir/.bundle"'
