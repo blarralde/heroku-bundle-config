@@ -36,8 +36,8 @@ echo "Done."
 
 echo 'ls -all "$build_dir/.apt/usr/include"'
 ls -all "$build_dir/.apt/usr/include"
-echo 'ls -all "$build_dir/.apt/usr/lib"'
-ls -all "$build_dir/.apt/usr/lib"
+echo 'ls -all "$build_dir/.apt/usr/lib/x86_64-linux-gnu"'
+ls -all "$build_dir/.apt/usr/lib/x86_64-linux-gnu"
 echo 'ls -all "$build_dir/.apt/usr/share"'
 ls -all "$build_dir/.apt/usr/share"
 
